@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Input form</title>
+</head>
+
+<body>
+    <!--
+            Patient :
+                - Last name, first name and sexe
+                - Address, CP and city
+                - Birthay and place
+                - Complementary info (optional)
+        -->
+    <header>
+        <h1>Patient informations form</h1>
+    </header>
+    <br>
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Civility</legend>
+            <p><label for="lastName">*Last name</label> : <input type="text" placeholder="Enter your last name" id="lastName" name="f_ln" required>
+                <label for="firstName">*First name</label> : <input type="text" placeholder="Enter your first name" id="firstName" name="f_fn" required></p>
+            <p><label for="gender">*Gender</label> : Man <input type="radio" id="gender" name="f_gender" value="M" required> Woman <input type="radio" id="gender" name="f_gender" value="W" required></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Address</legend>
+            <p><label for="address">*Address</label> <input type="text" name="f_address" id="address" placeholder="Enter your address" required><br>
+                <label for="ZC">*CP</label> : <input type="number" id="ZC" name="f_zc" placeholder="Enter your zipcode" required>
+                <label for="city">*City</label> : <input type="text" id="city" name="f_city" placeholder="Enter your city" required></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Birthay</legend>
+            <p><label for="birthday">*Birth date</label> : <input type="date" id="birthday" name="f_birthday" required>
+                <label for="birthPlace">*City</label> : <input type="text" id="birthPlace" name="f_birthplace" placeholder="Enter you birthplace city" required></p>
+        </fieldset>
+
+        <p><label for="Complementary">Complementary informations</label> :<br> <textarea name="Complementary" cols="80" rows="10" placeholder="Enter complementary infos if needed"></textarea></p>
+
+        <p><input type="reset" name="f_reset" value="Reset"> <input type="submit" name="f_submit" value="Submit"></p>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+/*Un commentaire*/
+/* Application du style CSS de facon sequentiel de haut en bas, les styles redondant sont ecrase */
+/* Exemple de propriete CSS */
+p
+
+/* selection des balises paragraphe de la page web*/
+    {
+    /*
+        <propriete>:<valeur>;
+        <propriete>:<valeur>;
+        <propriete>:<valeur>;
+        <propriete>:<valeur>;
+    */
+}
+
+body {
+    background-color: red;
+    /* background-image: url(18346.jpg); */
+    background-position: center;
+    background-size: cover;
+    margin: 30px;
+    width: 1800px;
+    /* background-origin et background-clip (padding-box, border-box ou content-box) pour coupure, cesure de l'image en bg
+       background-attachment (local(scroll) ou fixed) attache du bg
+       meta du background ex. background: color image position size repeat attachment;*/
+
+}
+section h1.title_sec{
+    font-style: oblique;
+}
+
+/*  selecteur avec un id = #, il est unique, impossible d'avoir 2 mm ID dans une page*/
+p#block {
+    font-style: italic;
+}
+
+/*  selecteur span dans un selecteur p avec une class color */
+p span.color {
+    background-color: white;
+    color: purple;
+    font-variant: small-caps;
+}
+
+/*  selecteur avec une class = .*/
+span.color {
+    color: green;
+    background-color: grey;
+}
+
+/* Possibilite de modifier des formulaires avec attribut specifique, a mettre entre [] */
+p[title]{
+    /*  <propriete>:<valeur>;*/
+}
+
+/* __________________________________________________________________________________________________________________ */
+
+p.modif_p{
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: normal;
+    font-size: 16px; /* px ou % ou em(taille par rapport au parent) ou xx-small -> xx-large*/
+    line-height: 25px; /*pareil que pour font size*/
+    font-family: Arial, serif; /* definir une police, si police de l'utilisateur, definir une police defaut de secours*/
+    font: ; /*meta commande pour font, ecrire les fonctions les une a la suite des autres*/
+}
+
+/*_____________________________________________________________________________________________________________________*/
+
+p.modif_r{
+    text-decoration-line: ; /*valeur pour la ligne*/
+    text-decoration-color: ; /*valeur pour la couleur*/
+    text-decoration-style: ; /*valeur pour le style*/
+    text-decoration: underline red; /*on peut faire suivre les 3 valeurs les une apres les autres (line color style), marche pas sur Edge)*/
+    text-shadow: 1px 1px 5px green; /*rajoute une ombre au texte (valeur : horizontale verticale intensite couleur)*/
+    text-transform: capitalize; /*pour changer le texte (majuscule, capitalize etc...)*/
+    text-align: justify; /*gerer l'alignement du texte*/
+    vertical-align: middle; /*gerer l'alignement verticale*/
+    text-indent: 15px; /*gerer l'indentation*/
+    text-overflow: ; /*couper une partie superflue d'un texte*/
+}
+
+.modif_s{
+    letter-spacing: 5px; /*gerer l'espacement des lettres*/
+    white-space:pre-wrap; /*gerer les espaces blancs*/
+    word-spacing: 15px; /*gerer l'espacement des mots*/
+    word-break: keep-all; /*coupure des mots en fin de ligne*/
+    word-wrap: break-word;
+}
+
+.modif_t{
+    direction: rtl; /*direction du texte (visuellement)*/
+    text-justify: ; /*pas compatible chrome, opera*/
+}
+
+/*  __________________________________________________________________________________________________________________________*/
+
+.modif_b{
+    color: darkblue; /*soit nom de la couleur, soit # + combinaison hexa, soit rgb(0,0,0) // rgba, a pour l'opacite de la couleur de 0 a 1.0 //
+                        hsl = hue, saturation, lightness (teinte, saturation, luminosite)*/
+}
+
+/*  Pour le fond, voir balise body avec option background plus haut*/
+
+/*____________________________________________________________________________________________________________________________________*/
+
+li{
+    /* list-style-image: url(redcross.png); /*option pour changer l'image de la puce de la liste*/ */
+    list-style-position:inside; /*opt pour le positionnement de la puce (ex. puce + texte ou juste texte // s'imager une boite, soit la puce est dans la boite avec le texte, soit elle est a l'exterieur)*/
+    list-style-type:circle; /*opt pour le style de la puce si on utilise pas d'image*/
+    list-style: ; /*opt meta pour les 3 options list*/
+}
+
+/*____________________________________________________________________________________________________________________________________*/
+
+html{
+    background-color: #FFF;
+
+}
+/* body voir plus haut*/
+
+div{
+    background-color: blue;
+    width: 600px;
+    height: 400px;
+}
+p{
+    background-color: #c76f6f;
+    width: 300px;
+    padding: 30px 500px 0px 5px;
+    text-align: justify;
+}\
+/* width | min-width | max-width
+   height| min-height | max-height
+*/
+/* Content < padding (marge interieur) < border < outline < margin (marge externe)
+    padding-top
+            -bottom
+            -right
+            -left
+    padding(meta):5px 5px 5px 5px(top right bottom left)
+
+    margin-top
+            -bottom
+            -right
+            -left
+    margin(meta):5px 5px 5px 5px(top right bottom left)
+*/

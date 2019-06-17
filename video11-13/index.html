@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<Head>
+    <meta charset="utf-8">
+    <title>My first web page, part 2</title>
+</Head>
+
+<body>
+    <h1>Video 11 to 13</h1>
+    <h3>Images</h3>
+    <!--
+    img : balise pour inserer des images
+        - src : defini la source (nom du fichier si fichier dans le mm dossier, sinon chemin)
+        - alt : attribut permettant une description alternatif si l'image ne se charge pas (laisser vide si image non importante)
+        - width/height : dimension de l'image
+        - longdesc : pour detailler la description (long paragraphe ou lien)
+        - usemap : pour utiliser une map defini
+    figure : balise pour ensemble de figure
+    figcaption : legend de l'image / figure(credit, source ou details)
+    map : balise pour mapper une image(definir sa zone)
+    area : definir une zone cliquable sur une image
+        - shape : forme de la zone cliquable
+        - coords : coordonnee de la zone
+            * rect = x1,y1 x2,y2
+            * circle = x,y,r
+            * poly = x1,y1,x2,y2,x3,y3.....x10,y10
+    picture : permet de gerer le format des images a afficher
+    source : gerer le type de media sur lequel l'image s'affichera
+        - srcset : source a afficher selon critere
+        - media : gerer type, taille... pour l'affichage du media(ex.min-width: 600px, affiche l'image de srcset si taille nav est min a 600px)
+    -->
+    <figure>
+        <img src="18334.jpg" alt="" width="600" height="auto">
+        <figcaption>Source : <a href="#">Geek</a></figcaption>
+    </figure><br>
+    <img src="18333.jpg" alt="" width="800" height="auto" usemap="#18333_map">
+    <map name="18333_map">
+        <area shape="rect" coords="0,0 220,240" href="18380.jpg" alt="">
+        <area shape="rect" coords="220,270 430,350" href="18346.jpg" alt="">
+    </map><br>
+    <picture>
+        <source srcset="18380.jpg" media="(min-width: 600px)">
+        <img src="18341.jpg" alt="">
+    </picture>
+
+    <hr><br>
+    <h3>Sounds and Videos</h3>
+    <!--
+    Audio format :
+        - MP3(compatible partout)
+        - WAV(tous sauf IE)
+        - OGG(tous sauf IE et Safari)
+    On ajoute un fichier audio via l'attribut src(comme pour les images) ou en ajoutant une balise source(comme avec picture)
+    audio attribut (booleen) :
+        - controls(strict minimum)
+        - muted
+        - autoplay
+        - loop
+        - preload(none, auto, metadata)
+        - volume(0 -> 1.0)
+    Video format :
+        - MP4(tous)
+        - WEBM(tous sauf IE et Safari)
+        - OGG(tous sauf IE et Safari)
+    video attribut (booleen) :
+        - Idem audio
+        - poster, pour afficher une miniature
+    -->
+    <video src="coffee.mp4" controls width="1000" height="auto" poster="18361.jpg">
+        Your browser don't support video
+    </video>
+    <br><audio controls>
+        <source src="bensound-summer.mp3" type="audio/mpeg">
+        Your browser don't support audio
+    </audio>
+    <hr><br>
+    <h3>Structured your page</h3>
+    <!--
+    div : creer une division au sein du doc
+    main : balise pour le contenu principal de votre page web(un seul main visible)
+    section : creer une section(logiquement titre)
+    article : pour le contenu provenant ou venant d'ailleurs (ex. article wiki, commentaire d'un autre site etc...)
+    aside : contenu non lie au site web
+    header : en-tete pour balise de structure(main, article, section...)
+    footer : pied pour balise de structure
+    nav : menu de navigation
+    -->
+    <nav>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Article</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>Iron Man is a fictional superhero appearing in <span>American comic books published by Marvel Comics</span>. The character was co-created by writer and editor Stan Lee, developed by scripter Larry Lieber, and designed by artists Don Heck
+            and Jack Kirby. The character made his first appearance in Tales of Suspense #39 (cover dated March 1963), and received his own title in Iron Man #1 (May 1968). </p>
+    </main>
+    <div>
+        <p>Iron Man is a fictional superhero appearing in American comic books published by Marvel Comics. The character was co-created by writer and editor Stan Lee, developed by scripter Larry Lieber, and designed by artists Don Heck and Jack
+            Kirby. The character made his first appearance in Tales of Suspense #39 (cover dated March 1963), and received his own title in Iron Man #1 (May 1968). </p>
+    </div>
+    <section>
+        <h1>Iron Man</h1>
+        <nav>
+            <ul>
+                <li><a href="#">First part</a></li>
+                <li><a href="#">Second part</a></li>
+            </ul>
+        </nav>
+        <p>Iron Man is a fictional superhero appearing in American comic books published by Marvel Comics. The character was co-created by writer and editor Stan Lee, developed by scripter Larry Lieber, and designed by artists Don Heck and Jack
+            Kirby. The character made his first appearance in Tales of Suspense #39 (cover dated March 1963), and received his own title in Iron Man #1 (May 1968). </p>
+    </section>
+    <article>
+        <header>
+            <h1>Iron Man</h1>
+        </header>
+        <p>Iron Man is a fictional superhero appearing in American comic books published by Marvel Comics. The character was co-created by writer and editor Stan Lee, developed by scripter Larry Lieber, and designed by artists Don Heck and Jack
+            Kirby. The character made his first appearance in Tales of Suspense #39 (cover dated March 1963), and received his own title in Iron Man #1 (May 1968). </p>
+        <footer> Copyright &copy 2018</footer>
+    </article>
+
+</body>
+
+</html>
