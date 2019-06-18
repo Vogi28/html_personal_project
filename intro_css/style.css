@@ -12,7 +12,7 @@ p
     */
 }
 
-body,div,p
+header,body,div,aside,footer,p
 {
     margin: auto;
 }
@@ -139,22 +139,21 @@ html
 }
 /* body voir plus haut*/
 
-div
+div.style
 {
     background-color: #35536b;
     width: 600px;
     height: 400px;
 }
 
-p
+p.older
 {
-    background-color: #4b4361;
+    background-color: #665e7d;
     width: 300px;
     padding: 30px 500px 0px 5px;
     text-align: justify;
     /* overflow-x: scroll; */
-    overflow-wrap:break-word;/*similaire a word-wrap*/
-
+    overflow-wrap: break-word;/*similaire a word-wrap*/
 }
 
 table, th, td
@@ -162,6 +161,7 @@ table, th, td
     border: 1px solid #000;
     border-collapse: separate; /*(separate pour garder des cases, collapse pour coller les cases entres elles)*/
     border-spacing: 20px; /*(cas separate, espace entre les cases)*/
+    visibility: collapse;
 }
 
 th, td
@@ -213,9 +213,103 @@ th, td
         border-bottom-left-radius
 
     outline:<witdh> <style> <color> (contour bordure)
-        idem border
+        idblock
 
     outline-offset:<px> <%> (espace entre outline et border)
 
 
 */
+
+/*____________________________________________________________________________________________________________________________________*/
+
+/*  Affichage
+        - display
+        - visibility
+        - opacity
+*/
+.disp_post
+{
+    border: 1px solid #000;
+    display: block; /*option d'affichage | <none> <block> <inline> <inline-block> <list-item>*/
+    visibility: hidden; /*pour masquer mais garde l'emplacement, <collapse> est fait pour masquer les tableaux*/
+}
+
+img.opacite
+{
+    display: block;
+    opacity: 0.3; /*opacite de l'image <0 - 1>*/
+}
+
+.ib
+{
+    display: inline-block;
+}
+
+/*
+    Positionnement
+        position: <relative> <fixed> <absolute>
+        top, right, bottom, left || s'utilise qvec position:relative
+        z-index: || positionnement sens z, le plus haut chiffre sera au premier plan
+        float: || permet au texte de se mettre a cote de l'image
+        clear: || annule le float
+*/
+div
+{
+    width: 200px;
+    height: 200px;
+}
+
+.first
+{
+    background-color: #96ab78;
+    position: fixed;
+    top: 100px;
+}
+
+.second
+{
+    background-color: rgb(146, 103, 171);
+    position: relative;
+    left: 500px;
+    top: 150px;
+}
+
+.third
+{
+    background-color: #6160aa;
+    position: absolute;
+    bottom: 10px;
+}
+
+.fleft
+{
+    float: left;
+}
+
+.hd
+{
+    background-color: rgb(38, 71, 38);
+    height: 80px;
+    width: 1000px;
+}
+
+.st
+{
+    background-color: rgb(79, 85, 44);
+    width: 800px;
+    float: left;
+}
+
+.as
+{
+    background-color: rgb(35, 47, 78);
+    width: 200px;
+    float: right;
+}
+
+.ft
+{
+    background-color: rgb(71, 51, 38);
+    width: 1000;
+    clear: right;
+}
