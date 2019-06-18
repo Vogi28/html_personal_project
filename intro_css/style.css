@@ -2,7 +2,6 @@
 /* Application du style CSS de facon sequentiel de haut en bas, les styles redondant sont ecrase */
 /* Exemple de propriete CSS */
 p
-
 /* selection des balises paragraphe de la page web*/
     {
     /*
@@ -13,48 +12,64 @@ p
     */
 }
 
-body {
-    background-color: red;
+body,div,p
+{
+    margin: auto;
+}
+
+body
+{
+    background-color: #DDD;
     /* background-image: url(18346.jpg); */
     background-position: center;
     background-size: cover;
-    margin: 30px;
+    border: 7px inset #0b305a;
+    border-radius: 20px;
+    outline: 10px dotted #5e3b27;
+    outline-offset: 15px;
     width: 1800px;
     /* background-origin et background-clip (padding-box, border-box ou content-box) pour coupure, cesure de l'image en bg
        background-attachment (local(scroll) ou fixed) attache du bg
        meta du background ex. background: color image position size repeat attachment;*/
 
 }
-section h1.title_sec{
+
+section h1.title_sec
+{
     font-style: oblique;
 }
 
 /*  selecteur avec un id = #, il est unique, impossible d'avoir 2 mm ID dans une page*/
-p#block {
+p#block
+{
     font-style: italic;
 }
 
 /*  selecteur span dans un selecteur p avec une class color */
-p span.color {
+p span.color
+{
     background-color: white;
     color: purple;
     font-variant: small-caps;
 }
 
 /*  selecteur avec une class = .*/
-span.color {
+span.color
+{
     color: green;
     background-color: grey;
 }
 
 /* Possibilite de modifier des formulaires avec attribut specifique, a mettre entre [] */
-p[title]{
+p[title]
+{
     /*  <propriete>:<valeur>;*/
 }
 
 /* __________________________________________________________________________________________________________________ */
 
-p.modif_p{
+p.modif_p
+{
     font-style: italic;
     font-variant: small-caps;
     font-weight: normal;
@@ -66,7 +81,8 @@ p.modif_p{
 
 /*_____________________________________________________________________________________________________________________*/
 
-p.modif_r{
+p.modif_r
+{
     text-decoration-line: ; /*valeur pour la ligne*/
     text-decoration-color: ; /*valeur pour la couleur*/
     text-decoration-style: ; /*valeur pour le style*/
@@ -79,7 +95,8 @@ p.modif_r{
     text-overflow: ; /*couper une partie superflue d'un texte*/
 }
 
-.modif_s{
+.modif_s
+{
     letter-spacing: 5px; /*gerer l'espacement des lettres*/
     white-space:pre-wrap; /*gerer les espaces blancs*/
     word-spacing: 15px; /*gerer l'espacement des mots*/
@@ -87,14 +104,16 @@ p.modif_r{
     word-wrap: break-word;
 }
 
-.modif_t{
+.modif_t
+{
     direction: rtl; /*direction du texte (visuellement)*/
     text-justify: ; /*pas compatible chrome, opera*/
 }
 
 /*  __________________________________________________________________________________________________________________________*/
 
-.modif_b{
+.modif_b
+{
     color: darkblue; /*soit nom de la couleur, soit # + combinaison hexa, soit rgb(0,0,0) // rgba, a pour l'opacite de la couleur de 0 a 1.0 //
                         hsl = hue, saturation, lightness (teinte, saturation, luminosite)*/
 }
@@ -103,7 +122,8 @@ p.modif_r{
 
 /*____________________________________________________________________________________________________________________________________*/
 
-li{
+li
+{
     /* list-style-image: url(redcross.png); /*option pour changer l'image de la puce de la liste*/ */
     list-style-position:inside; /*opt pour le positionnement de la puce (ex. puce + texte ou juste texte // s'imager une boite, soit la puce est dans la boite avec le texte, soit elle est a l'exterieur)*/
     list-style-type:circle; /*opt pour le style de la puce si on utilise pas d'image*/
@@ -112,23 +132,44 @@ li{
 
 /*____________________________________________________________________________________________________________________________________*/
 
-html{
+html
+{
     background-color: #FFF;
 
 }
 /* body voir plus haut*/
 
-div{
-    background-color: blue;
+div
+{
+    background-color: #35536b;
     width: 600px;
     height: 400px;
 }
-p{
-    background-color: #c76f6f;
+
+p
+{
+    background-color: #4b4361;
     width: 300px;
     padding: 30px 500px 0px 5px;
     text-align: justify;
-}\
+    /* overflow-x: scroll; */
+    overflow-wrap:break-word;/*similaire a word-wrap*/
+
+}
+
+table, th, td
+{
+    border: 1px solid #000;
+    border-collapse: separate; /*(separate pour garder des cases, collapse pour coller les cases entres elles)*/
+    border-spacing: 20px; /*(cas separate, espace entre les cases)*/
+}
+
+th, td
+{
+    padding: 10px;
+}
+/*____________________________________________________________________________________________________________________________________*/
+
 /* width | min-width | max-width
    height| min-height | max-height
 */
@@ -144,4 +185,37 @@ p{
             -right
             -left
     margin(meta):5px 5px 5px 5px(top right bottom left)
+
+    overflow (empecher les depassement de box): auto|hidden|scroll
+    overflow-x
+    overflow-y
+    overflow-wrap(retour a la ligne des overflows)
+*/
+
+/*____________________________________________________________________________________________________________________________________*/
+
+/*
+    border:width|style|color
+        border-width
+        border-style:dotted|dashed|solid|double|groove|ridge|inset|outset
+        border-color
+    border-top:width|style|color
+        border-top-width
+        idem
+        idem
+
+    border-image:<source> <slice> <width> <outset> <repeat> (generateur sur border-image.com)
+
+    border-radius: px|% (pour arrondir les coins, soit les 4 coins soit, px px px px (TL, TR, BR, BL))
+        border-top-left-radius
+        border-top-right-radius
+        border-bottom-right-radius
+        border-bottom-left-radius
+
+    outline:<witdh> <style> <color> (contour bordure)
+        idem border
+
+    outline-offset:<px> <%> (espace entre outline et border)
+
+
 */
