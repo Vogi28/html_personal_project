@@ -27,7 +27,7 @@ body
     border-radius: 20px;
     outline: 10px dotted #5e3b27;
     outline-offset: 15px;
-    width: 1800px;
+    width: 1000px;
     /* background-origin et background-clip (padding-box, border-box ou content-box) pour coupure, cesure de l'image en bg
        background-attachment (local(scroll) ou fixed) attache du bg
        meta du background ex. background: color image position size repeat attachment;*/
@@ -255,8 +255,8 @@ img.opacite
 */
 div
 {
-    width: 200px;
-    height: 200px;
+    /* width: 200px;
+    height: 200px; */
 }
 
 .first
@@ -312,4 +312,34 @@ div
     background-color: rgb(71, 51, 38);
     width: 1000;
     clear: right;
+}
+
+/*____________________________________________________________________________________________________________________________________*/
+
+#wrapper
+{
+    /* box-shadow: 0 0 3px #000; || Ombrage des bordures */
+    border: 2px solid darkblue;
+
+}
+
+#wrapper, .bloc1, .bloc2
+{
+    width: 100%;
+}
+.bloc1, .bloc2
+{
+    box-sizing: border-box; /*pour prendre en compte les border, padding(marges interieurs)...dans le calcul du width/height||evite les debordements*/
+}
+
+.bloc1
+{
+    background-color: rgb(224, 184, 141);
+}
+
+.bloc2
+{
+    background-color: rgb(122, 130, 203);
+    border: 15px dashed darkred;
+    padding: 20px;
 }
