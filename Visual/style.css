@@ -1,0 +1,64 @@
+body
+{
+    background-color: #EEE;
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: auto minmax(150px 300px);
+    grid-template-areas: "entete entete"
+                         "principal barl"
+                         "pied pied"
+}
+
+header{grid-area: entete;}
+
+section, aside
+{
+    padding: 20px;
+}
+section
+{
+    background-color: #DDD;
+    grid-area: principal;
+}
+
+aside
+{
+    background-color: #AAA;
+    grid-area: barl;
+}
+
+footer{grid-area: pied;}
+
+@media (max-width:800px) /*media queries || type de peripherique: media all|screen|speech|print*/
+{
+    body
+    {
+        background-color: #BBB;
+    }
+
+    .container
+    {
+        grid-template-columns: 1fr;
+        grid-template-areas: "entete"
+                            "principal"
+                            "barl"
+                            "pied"
+    }
+}
+
+/* Point de rupture generique
+   - XS -> smartphone jusqu'q 568px
+   - S ->768
+   - M -> 992
+   - L ->1024
+   - XL -> 1280
+*/
